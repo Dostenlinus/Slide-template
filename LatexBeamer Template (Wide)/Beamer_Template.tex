@@ -1,0 +1,306 @@
+\documentclass[xcolor={usenames,dvipsnames}, 
+	hyperref={
+	colorlinks=false, 						% Internetseiten werden farblich hervorgehoben
+	linkcolor=black, 						% Farbe f�r interne Referenzen
+	urlcolor=black,							% Farbe f�r Links auf Webseiten
+	citecolor=black,						% Farbe f�r Zitate \cite{<bibtexid>}
+	pdfpagelabels=false,
+	%pdfauthor={}, 
+	%pdftitle={}				% Verewigt Author und Titel in PDF-Informationen
+	},
+	ignorenonframetext,			% Keine Nummerierung auf erster Folie
+	compress,					% Minimize navigation bars
+	aspectratio=169
+]{beamer}
+%===== Formatierungs-Packages =====
+	\usepackage[T1]{fontenc}				% fontenc und inputenc erm�glichen
+	\usepackage[latin1]{inputenc}			% Silbentrennung und Eingabe 
+	%\usepackage[utf8]{inputenc}
+	\usepackage{lmodern}					% Schrift wirkt (in pdf-Ausgabe) flie�ender
+  					
+
+%===== Sprach-Packages =====
+	%\usepackage[ngerman]{babel}			% Babel f�r diverse Sprachanpassungen, 
+  										% z.B. Anf�hrungszeichen
+%===== Interne Latex-Packages =====
+%	\usepackage{fixltx2e} 				% Verbessert einige Kernkompetenzen von LaTeX2e
+  
+%===== Mathe-Packages ======
+	\usepackage{amsmath, amssymb, amsfonts} 	% Mathematische Features der American Mathematical
+	\usepackage{cancel}
+	\usepackage[output-decimal-marker={,},  	% Deutsche Dezimaltrennung mit Komma
+		separate-uncertainty = true,		  	% Fehlerangabe: \SI{3(2)}{\tesla}
+		per-mode=fraction,					  	% Einheiten als Bruch darstellen
+		exponent-product = \cdot,			  	% Exponentialschreibweise mit Malzeichen \SI{3e8}{\tesla}
+		%math-ohm,
+		range-phrase = -					% Option f�r Bereichsangabe \SIrange{3}{4}{\tesla}
+		]{siunitx} 						  	
+ 								% Elementar wichtig f�r Einheiten \siunit{3}{\milli\meter}					% \unit{\tesla}, \num{<Zahl>}
+  
+%===== Grafik/Tabellen-Packages ======
+	\usepackage{xcolor}						% Erlaubt das Verwenden von Farben
+	\usepackage{graphicx} 					% Erlaub das Einbinden von Bildern
+	\usepackage{multirow} 					% Erlaubt multicolumn{3}{c}{Bla}
+	\usepackage{rotating} 					% Erlaubt sidewaystable-Umgebung
+	\usepackage{subfig}
+	%\usepackage[miktex,subfolder,siunitx]{gnuplottex} % Gnuplot in Latex
+  
+%===== bibliography =====
+	\usepackage[numbers,square]{natbib} 	%Einbinden der Bibliothek mit "[1]" Zitat
+  
+%===== Sonstiges ======
+	\usepackage{url}						% Erlaubt das Einbinden einer URL
+	\usepackage{pdfpages}					% \includepdf{<file>.pdf} wird verf�gbar
+	\usepackage[flushmargin,				% Fu�noten b�ndig mit Seitenr�ndern
+		hang,									% H�ngender Zeilenumbruch bei Fu�noten 
+		bottom]{footmisc}						% Zwingt Fu�noten ans Ende der Seite
+	\usepackage{hyperref} 	% Hyperref-Package verlinkt interne Referenzen
+	\usepackage{lipsum} 	% F�r Testzecke \lipsum[1]
+  
+%===== Beamer template - Spezifikationen ======
+	\usepackage{beamerthemetexsx}
+	\setbeamertemplate{mini frames}[box]
+	%\renewcommand{\bibsection}{\section{Literature}}
+%\setbeameroption{show notes on second screen=right}
+
+\usepackage{appendixnumberbeamer}
+
+
+%==== Informationen ====
+	
+	\title{Titel} 
+	\subtitle[Optional Subtitle]{Subtitel}
+	\author{David Osten} 
+	\institute{Topic/Lecture Series}
+	\date{xx/xx/2022}
+
+\begin{document}
+
+\begin{frame}[plain,noframenumbering]  %Keine Fu�zeile auf erster Seite und keine Nummerierung
+	\titlepage
+\end{frame}
+	
+\addtocounter{framenumber}{-1} %Titelseite wird nicht gez�hlt im Counter
+
+%\setbeamertemplate{footline}{authorinstitutetitle} %Aktiviere Fu�zeile
+
+%---------------------------------------------------------------------
+
+
+
+%---------------------------------------------------------------------
+
+
+\begin{frame}
+	\frametitle{Motivation}
+	\begin{itemize}
+		\item 
+		\item 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Preview of Findings}
+	Key Take-aways:
+	\begin{itemize}
+		\item 
+		\item 
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Table of Contents}
+	\tableofcontents
+\end{frame}
+
+
+\section{Section1}
+\begin{frame}
+	\frametitle{Frame1}
+	\begin{itemize}
+	\item 
+	\item 
+	\item
+	\item 
+	\item 
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Frame2}
+
+\begin{itemize}
+	\item 
+	\item
+	\item 
+\end{itemize}
+
+\end{frame}
+
+
+%---------------------------------------------------------------------
+\section{Section2}
+
+\begin{frame}
+\frametitle{Frame3}
+
+\begin{itemize}
+	\item 
+	\item 
+	\item
+	\item 
+	\item 
+	\item 
+	\item 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Frame4}
+	%\label{Information Structure}
+	\begin{itemize}
+		\item  \hyperlink{Label}{\beamerbutton{more}}
+		\item 
+	\end{itemize}
+
+\end{frame}
+
+
+
+\begin{frame}
+\frametitle{Frame5}
+\begin{itemize} 
+	\item 
+	\item 
+\end{itemize}
+\ \\
+
+\begin{equation*}
+	1
+\end{equation*}
+\ \\
+
+\begin{equation*}
+1
+\end{equation*}
+\end{frame}
+
+\begin{frame}
+	\frametitle{}
+	
+\end{frame}
+
+\section{Section3}
+\begin{frame}
+	\frametitle{Frame6}
+
+	\begin{enumerate} 
+		\item 
+		\item 
+		\item 
+		\item 
+	\end{enumerate}
+\end{frame}
+
+\begin{frame}
+	\frametitle{Frame7}
+	
+	\begin{equation*}
+		1
+	\end{equation*}
+
+\end{frame}
+
+\begin{frame}
+	\frametitle{Frame8}
+	
+	
+	\begin{block}{}
+	1
+	\end{block}
+	
+\end{frame}
+
+%---------------------------------------------------------------------
+\section{Section4}
+\begin{frame}
+\frametitle{Frame9}
+
+
+\begin{itemize}
+\item
+\item 
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Frame10}
+\begin{itemize}
+	\item 
+	\item
+	\item 
+	\item
+	\item 
+	\item 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Frame11}
+
+\end{frame}
+
+
+%---------------------------------------------------------------------
+
+
+
+
+% \begin{frame}
+%	\frametitle{}
+%	\begin{center}
+%		\includegraphics[scale = 0.45]{Name.PNG}
+%	\end{center}
+%\end{frame}
+
+%---------------------------------------------------------------------
+
+
+\begin{frame}[plain,noframenumbering] 
+\begin{center}
+	\Huge{Titel}
+\end{center}
+\ \\
+\begin{center}
+	\Large{Subtitel}
+\end{center}
+\end{frame}
+%---------------------------------------------------------------------
+
+
+%%%%%% Appendix
+
+\begin{frame}
+	\label{Label1}
+	\frametitle{}
+	\hyperlink{Label2}{\beamerbutton{back}}
+	
+\end{frame}
+
+
+%---------------------------------------------------------------------
+
+%\section{Literature}
+
+
+
+%---------------------------------------------------------------------
+
+
+
+
+\end{document}
