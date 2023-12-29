@@ -103,15 +103,15 @@
 	\begin{tikzpicture}
 		\useasboundingbox[fill=white] (0,0) rectangle(\the\paperwidth,\the\paperheight);
 		%Background navigation sections
-		\draw[fill=jgudarkgrey,draw=none] (1.405,1) rectangle (1.05\paperwidth,1.4) node[midway,text=white] {\tiny\insertnavigation{.75\paperwidth}};		
-		%JGU logo
-		\node[anchor=south west, inner sep=0pt] (zero) at (0,-0.005)
-		{\includegraphics[height=1.4cm, keepaspectratio]{Logos/Logo2.pdf}};
+		\draw[fill=jgudarkgrey,draw=none] (0.25,1) rectangle (1.05\paperwidth,1.4) node[midway,text=white] {\tiny\insertnavigation{.75\paperwidth}};		
+		%JHU logo
+		\node[anchor=south west, inner sep=0pt] (zero) at (0,0.25)
+		{\includegraphics[height=1.12cm, keepaspectratio]{Logos/Logo2.pdf}};
 		%frame(sub)title background
-		\draw[fill=jhulightblue,draw=none] (1.405,0) rectangle (1.05\paperwidth,1);
+		\draw[fill=jhulightblue,draw=none] (1.1,0.26) rectangle (1.05\paperwidth,1);
 		%frame(sub)title
 		\ifx\insertframesubtitle\@empty%
-			\node[inner sep = 0pt,anchor=west,white,font=\large] at (1.6,.5) {\insertframetitle};
+			\node[inner sep = 0pt,anchor=west,white,font=\large] at (1.4,.625) {\insertframetitle};
 		\else%
 			{
 			\node[inner sep = 0pt,anchor=west,text=white,font=\large] at (1.6,.75) {\insertframetitle};
