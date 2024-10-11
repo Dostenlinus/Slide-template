@@ -94,6 +94,8 @@
 
 %===================================================================================
 %===================================================================================
+
+%%%%%%%%%%%%% Change size of Header band on top of regular slide: 
 % Frametitle / Head
 \defbeamertemplate*{frametitle}{texsx}
 {
@@ -105,16 +107,16 @@
 		%Background navigation sections
 		\draw[fill=jgudarkgrey,draw=none] (0.25,1) rectangle (1.05\paperwidth,1.4) node[midway,text=white] {\tiny\insertnavigation{.75\paperwidth}};		
 		%JHU logo
-		\node[anchor=south west, inner sep=0pt] (zero) at (0,0.25)
-		{\includegraphics[height=1.12cm, keepaspectratio]{Logos/Logo2.pdf}};
+		\node[anchor=south west, inner sep=0pt] (zero) at (0,0.40)
+		{\includegraphics[height=0.98cm, keepaspectratio]{Logos/Logo2.pdf}};
 		%frame(sub)title background
-		\draw[fill=jhulightblue,draw=none] (1.1,0.26) rectangle (1.05\paperwidth,1);
+		\draw[fill=jhulightblue,draw=none] (0.95,0.4) rectangle (1.05\paperwidth,1);
 		%frame(sub)title
 		\ifx\insertframesubtitle\@empty%
-			\node[inner sep = 0pt,anchor=west,white,font=\large] at (1.4,.625) {\insertframetitle};
+			\node[inner sep = 0pt,anchor=west,white,font=\large] at (1.4,.69) {\insertframetitle};
 		\else%
 			{
-			\node[inner sep = 0pt,anchor=west,text=white,font=\large] at (1.6,.75) {\insertframetitle};
+			\node[inner sep = 0pt,anchor=west,text=white,font=\large] at (1.6,0.75) {\insertframetitle};
 			\node[inner sep = 0pt,anchor=west,text=white,font=\small] at (1.6,.25) {\insertframesubtitle};
 			}
 		\fi
