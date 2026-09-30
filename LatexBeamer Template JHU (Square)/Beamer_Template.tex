@@ -64,6 +64,16 @@
 
 \usepackage{appendixnumberbeamer}
 
+%%% ====== Condition for final page to bring back title page background ======
+\newif\iffinalpage
+\finalpagefalse
+
+\newcommand{\finalpage}{
+	\usebeamertemplate{final page}
+}
+%=============================================================================
+
+
 
 %==== Informationen ====
 	
@@ -268,20 +278,16 @@
 
 %---------------------------------------------------------------------
 
-
-\begin{frame}[plain,noframenumbering] 
-\begin{center}
-	\Huge{Titel}
-\end{center}
-\ \\
-\begin{center}
-	\Large{Subtitel}
-\end{center}
+%%%%%% Mini Appendix for final page
+\appendix
+\finalpagetrue
+\begin{frame}[plain,noframenumbering]  
+	\finalpage
 \end{frame}
-%---------------------------------------------------------------------
 
-
-%%%%%% Appendix
+%%%% ====== True Appendix ============
+\appendix
+\finalpagefalse
 
 \begin{frame}
 	\label{Label1}
