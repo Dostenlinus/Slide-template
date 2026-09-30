@@ -64,6 +64,14 @@
 %\setbeameroption{show notes on second screen=right}
 
 \usepackage{appendixnumberbeamer}
+%%% ====== Condition for final page to bring back title page background ======
+\newif\iffinalpage
+\finalpagefalse
+
+\newcommand{\finalpage}{
+	\usebeamertemplate{final page}
+}
+%=============================================================================
 
 
 %==== Informationen ====
@@ -72,7 +80,7 @@
 	\subtitle[Optional Subtitle]{Subtitel}
 	\author{David Osten} 
 	\institute{Topic/Lecture Series}
-	\date{xx/xx/2022}
+	\date{xx/xx/202x}
 
 \begin{document}
 
@@ -267,30 +275,34 @@
 %	\end{center}
 %\end{frame}
 
+
 %---------------------------------------------------------------------
 
-
-\begin{frame}[plain,noframenumbering] 
-\begin{center}
-	\Huge{Titel}
-\end{center}
-\ \\
-\begin{center}
-	\Large{Subtitel}
-\end{center}
+%%%%%% Mini Appendix for final page
+\appendix
+\finalpagetrue
+\begin{frame}[plain,noframenumbering]  
+	\finalpage
+	
 \end{frame}
-%---------------------------------------------------------------------
 
-
-%%%%%% Appendix
+%%%% ====== True Appendix ============
+\appendix
+\finalpagefalse
 
 \begin{frame}
 	\label{Label1}
-	\frametitle{}
+	\frametitle{Title 1}
 	\hyperlink{Label2}{\beamerbutton{back}}
 	
 \end{frame}
 
+\begin{frame}
+	\label{Label2}
+	\frametitle{Title 2}
+	\hyperlink{Label2}{\beamerbutton{back}}
+	
+\end{frame}
 
 %---------------------------------------------------------------------
 
