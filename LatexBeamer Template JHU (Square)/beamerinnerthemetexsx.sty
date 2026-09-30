@@ -30,47 +30,47 @@
 { 
    \ifx\insertsubtitle\@empty%
 		%without subtitle
-		\vskip5.5cm%
-		\begin{beamercolorbox}[wd=12cm,right,sep=8pt,#1]{title page header}
+		\vskip2.5cm%
+		\begin{beamercolorbox}[wd=\paperwidth,  center,sep=8pt,#1]{title page header}
 			\usebeamerfont{title}\inserttitle\par%%
 		\end{beamercolorbox}%
-		  \vskip.9cm%
-		\begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
+		  \vskip3.15cm%
+		\begin{beamercolorbox}[wd=12.75cm,leftskip=2.25cm,#1]{author}
 			\usebeamerfont{author}\insertauthor%
 		\end{beamercolorbox}
 			\vskip0.15cm%
-		\begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
+		\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm,#1]{author}
 			\usebeamerfont{author}\insertinstitute%
 		\end{beamercolorbox}
 			\vskip0.15cm%
-		\begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{date}
+		\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm,#1]{date}
 			\usebeamerfont{author}\insertdate%
 		\end{beamercolorbox}
 		
 		%with subtitle
 		\else%
-			\vskip4.5cm%
-			\begin{beamercolorbox}[wd=12cm,right,sep=8pt,#1]{title page header}
-				\usebeamerfont{title}\inserttitle\par%%
-			\end{beamercolorbox}%
-			\vskip0.15cm%
-			\begin{beamercolorbox}[wd=12cm,right,sep=8pt,#1]{title page header}
+			\vskip2.5cm%
+			\begin{beamercolorbox}[wd=\paperwidth,  center,  sep=8pt,  #1]{title page header} 
+				 \usebeamerfont{title}\inserttitle\par
+			\end{beamercolorbox}
+			\vskip0.4cm%
+			\begin{beamercolorbox}[wd=\paperwidth,  center,sep=8pt,#1]{title page header}
 				\usebeamerfont{subtitle}\insertsubtitle\par%%
 			\end{beamercolorbox}%
 			    %\vspace*{\fill}
-			\vskip0.75cm%
-			\begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
+			\vskip2.1cm%
+			\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm,#1]{author}
 			\usebeamerfont{author}\insertauthor%
 			\end{beamercolorbox}
 			\vskip0.15cm%
-			\begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{author}
+			\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm,#1]{author}
 			\usebeamerfont{author}\insertinstitute%
 			\end{beamercolorbox}
 			\vskip0.15cm%
-			\begin{beamercolorbox}[wd=12cm,leftskip=3cm,#1]{date}
+			\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm,#1]{date}
 			\usebeamerfont{author}\insertdate%
-			\end{beamercolorbox}
-			%\vskip-0.5cm% 
+			\end{beamercolorbox} 
+			%\vskip-0.75cm%
 		\fi
 }
 

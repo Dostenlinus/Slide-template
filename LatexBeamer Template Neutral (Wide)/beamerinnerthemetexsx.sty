@@ -30,15 +30,16 @@
   \end{tikzpicture}
 }
 
+
 \defbeamertemplate*{title page}{texsx}[1][]
 { 
    \ifx\insertsubtitle\@empty%
 		%without subtitle
-		\vskip2.9cm%
-		\begin{beamercolorbox}[wd=12.75cm,right,sep=8pt,#1]{title page header}
+		\vskip2.5cm%
+		\begin{beamercolorbox}[wd=\paperwidth,  center,sep=8pt,#1]{title page header}
 			\usebeamerfont{title}\inserttitle\par%%
 		\end{beamercolorbox}%
-		  \vskip2.75cm%
+		  \vskip3.15cm%
 		\begin{beamercolorbox}[wd=12.75cm,leftskip=2.25cm,#1]{author}
 			\usebeamerfont{author}\insertauthor%
 		\end{beamercolorbox}
@@ -53,16 +54,16 @@
 		
 		%with subtitle
 		\else%
-			\vskip2.9cm%
-			\begin{beamercolorbox}[wd=12cm,right,sep=8pt,#1]{title page header}
-				\usebeamerfont{title}\inserttitle\par%%
-			\end{beamercolorbox}%
+			\vskip2.5cm%
+			\begin{beamercolorbox}[wd=\paperwidth,  center,  sep=8pt,  #1]{title page header} 
+				 \usebeamerfont{title}\inserttitle\par
+			\end{beamercolorbox}
 			\vskip0.4cm%
-			\begin{beamercolorbox}[wd=12cm,right,sep=8pt,#1]{title page header}
+			\begin{beamercolorbox}[wd=\paperwidth,  center,sep=8pt,#1]{title page header}
 				\usebeamerfont{subtitle}\insertsubtitle\par%%
 			\end{beamercolorbox}%
 			    %\vspace*{\fill}
-			\vskip1.7cm%
+			\vskip2.1cm%
 			\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm,#1]{author}
 			\usebeamerfont{author}\insertauthor%
 			\end{beamercolorbox}
@@ -80,47 +81,47 @@
 %========================== Final Page ===================================================
 
 \defbeamertemplate*{final page}{texsx}
-{
+{ 
    \ifx\insertsubtitle\@empty%
 		%without subtitle
-		\vskip2.9cm%
-		\begin{beamercolorbox}[wd=12.75cm,right,sep=8pt]{title page header}
+		\vskip2.5cm%
+		\begin{beamercolorbox}[wd=\paperwidth,  center,sep=8pt,#1]{title page header}
 			\usebeamerfont{title}\inserttitle\par%%
 		\end{beamercolorbox}%
-		  \vskip2.75cm%
-		\begin{beamercolorbox}[wd=12.75cm,leftskip=2.25cm]{author}
+		  \vskip3.15cm%
+		\begin{beamercolorbox}[wd=12.75cm,leftskip=2.25cm,#1]{author}
 			\usebeamerfont{author}\insertauthor%
 		\end{beamercolorbox}
 			\vskip0.15cm%
-		\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm]{author}
+		\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm,#1]{author}
 			\usebeamerfont{author}\insertinstitute%
 		\end{beamercolorbox}
 			\vskip0.15cm%
-		\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm]{date}
+		\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm,#1]{date}
 			\usebeamerfont{author}\insertdate%
 		\end{beamercolorbox}
 		
 		%with subtitle
 		\else%
-			\vskip2.9cm%
-			\begin{beamercolorbox}[wd=12cm,right,sep=8pt]{title page header}
-				\usebeamerfont{title}\inserttitle\par%%
-			\end{beamercolorbox}%
+			\vskip2.5cm%
+			\begin{beamercolorbox}[wd=\paperwidth,  center,  sep=8pt,  #1]{title page header} 
+				 \usebeamerfont{title}\inserttitle\par
+			\end{beamercolorbox}
 			\vskip0.4cm%
-			\begin{beamercolorbox}[wd=12cm,right,sep=8pt]{title page header}
+			\begin{beamercolorbox}[wd=\paperwidth,  center,sep=8pt,#1]{title page header}
 				\usebeamerfont{subtitle}\insertsubtitle\par%%
 			\end{beamercolorbox}%
 			    %\vspace*{\fill}
-			\vskip1.7cm%
-			\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm]{author}
+			\vskip2.1cm%
+			\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm,#1]{author}
 			\usebeamerfont{author}\insertauthor%
 			\end{beamercolorbox}
 			\vskip0.15cm%
-			\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm]{author}
+			\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm,#1]{author}
 			\usebeamerfont{author}\insertinstitute%
 			\end{beamercolorbox}
 			\vskip0.15cm%
-			\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm]{date}
+			\begin{beamercolorbox}[wd=12cm,leftskip=2.25cm,#1]{date}
 			\usebeamerfont{author}\insertdate%
 			\end{beamercolorbox} 
 			%\vskip-0.75cm%
